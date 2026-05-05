@@ -55,8 +55,10 @@ Quiero mi web 🚀
     </a>
   </div>
 
- <div class="mockup">
-  <img src="imagenes/muzzarellia.jpg" class="pantalla">
+ <div class="premium-img">
+  <div class="mockup">
+    <img src="imagenes/muzzarellia.jpg" class="pantalla">
+  </div>
 </div>
 
 </section>
@@ -143,7 +145,8 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-document.querySelectorAll(".animar").forEach(el => observer.observe(el));
+// 👇 ahora observa TODO lo animable
+document.querySelectorAll(".animar, .mockup").forEach(el => observer.observe(el));
 </script>
 </body>
 </html>

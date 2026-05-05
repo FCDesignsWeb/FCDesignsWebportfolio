@@ -650,13 +650,9 @@ transform:translateY(-3px);
 .premium-img img:hover{
   transform:scale(1.03);
 }
-.mockup{
-  transition:all 0.6s ease;
-}
 
-.premium-proyecto:hover .mockup{
-  transform:rotate(-2deg) scale(1.03);
-}
+
+
 /* RESPONSIVE */
 @media(max-width:768px){
   .premium-proyecto{
@@ -671,7 +667,21 @@ transform:translateY(-3px);
   .descripcion{
     margin:auto;
   }
+  .mockup{
+  transform:translateY(60px) scale(0.95);
+  opacity:0;
+  transition:all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.mockup.show{
+  transform:translateY(0) scale(1);
+  opacity:1;
+}
+}
+/* ========================= */
+/* MOCKUP PREMIUM */
+/* ========================= */
+
 .mockup{
   width:260px;
   height:520px;
@@ -680,6 +690,7 @@ transform:translateY(-3px);
   padding:12px;
   box-shadow:0 25px 60px rgba(0,0,0,0.3);
   position:relative;
+  transition:all 0.6s ease;
 }
 
 /* PANTALLA */
@@ -690,7 +701,7 @@ transform:translateY(-3px);
   border-radius:25px;
 }
 
-/* NOTCH (detalle iPhone) */
+/* NOTCH */
 .mockup::before{
   content:"";
   position:absolute;
@@ -703,7 +714,7 @@ transform:translateY(-3px);
   border-radius:20px;
 }
 
-/* BOTON LATERAL */
+/* BOTÓN */
 .mockup::after{
   content:"";
   position:absolute;
@@ -714,3 +725,14 @@ transform:translateY(-3px);
   background:#444;
   border-radius:5px;
 }
+
+/* HOVER DESKTOP */
+.premium-proyecto:hover .mockup{
+  transform:rotate(-2deg) scale(1.03);
+  box-shadow:0 30px 80px rgba(255,79,163,0.4);
+}
+
+
+
+
+
