@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Proyectos | FCDesignsWeb</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>FCDesignsWeb</h1>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="proyectos.html" class="activo">Proyectos</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+</header>
+
+<section class="hero-proyectos">
+<h1>Proyectos realizados</h1>
+<p>Estos son algunos trabajos reales que desarrollé.</p>
+</section>
+
+<section id="proyectos">
+
+<div class="proyectos-container">
+
+<div class="proyecto animar">
+<img src="imagenes/ran17.jpg" alt="RAN17 Logística">
+<h3>RAN17 Logística</h3>
+<p>Web profesional con contacto directo.</p>
+<a href="https://fcdesignsweb.github.io/RAN17Logistica/" target="_blank">Ver web</a>
+</div>
+
+<div class="proyecto animar">
+<img src="imagenes/loreta.jpg" alt="Loreta Dulces">
+<h3>Loreta Dulces</h3>
+<p>Página web para emprendimiento gastronómico.</p>
+<a href="https://fcdesignsweb.github.io/loretadulces/" target="_blank">Ver web</a>
+</div>
+
+<div class="proyecto animar">
+<img src="imagenes/marina.jpg" alt="Marina Masajes">
+<h3>Marina Masajes</h3>
+<p>Web de servicios enfocada en generar consultas.</p>
+<a href="https://fcdesignsweb.github.io/marinamasajes/" target="_blank">Ver web</a>
+</div>
+
+<div class="proyecto animar">
+<img src="imagenes/renders.jpg" alt="Visualización Render">
+<h3>Visualización Render</h3>
+<p>Portfolio visual profesional.</p>
+<a href="https://fcdesignsweb.github.io/visualizacionrenderCR/" target="_blank">Ver web</a>
+</div>
+
+<div class="proyecto animar">
+<img src="imagenes/hexen.jpg" alt="Hexen Tienda">
+<h3>Hexen Tienda</h3>
+<p>Tienda online con diseño moderno.</p>
+<a href="https://fcdesignsweb.github.io/hexentienda/" target="_blank">Ver web</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© FCDesignsWeb - Diseño Web 2026</p>
+</footer>
+<a class="instagram-float" href="https://www.instagram.com/fcdesignsweb/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a class="whatsapp-float" href="https://wa.me/2392492681?text=Hola%20vi%20tu%20web%20y%20quiero%20info" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<script>
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".animar").forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
