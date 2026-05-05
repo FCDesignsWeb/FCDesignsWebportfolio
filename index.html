@@ -134,5 +134,16 @@ menu.classList.toggle("active");
 <a class="whatsapp-float" href="https://wa.me/2392492681?text=Hola%20vi%20tu%20web%20y%20quiero%20info" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".animar").forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
